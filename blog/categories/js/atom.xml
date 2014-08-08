@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: js | 生命不止，征战不息]]></title>
+  <link href="http://secondrocker.github.io/blog/categories/js/atom.xml" rel="self"/>
+  <link href="http://secondrocker.github.io/"/>
+  <updated>2014-08-08T23:52:23+08:00</updated>
+  <id>http://secondrocker.github.io/</id>
+  <author>
+    <name><![CDATA[Secondrocker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[js闭包]]></title>
+    <link href="http://secondrocker.github.io/blog/2014/08/08/jsbi-bao/"/>
+    <updated>2014-08-08T10:58:57+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2014/08/08/jsbi-bao</id>
+    <content type="html"><![CDATA[<p>创建一个对象时如果该对象用到某个内部作用域的变量，那么对这个内部作用域创建一个闭包</p>
+
+<p>eg
+<code>javascript
+function a(){
+  var n=0;
+  addN=function(){
+    n+=1;
+    console.log(n);
+  };
+  return addN;
+}
+x=a();     //创建一个闭包
+x();       //输出1
+x();       //输出2
+y=a();     //创建另一个闭包
+y();       //输出1
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

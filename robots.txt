@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://secondrocker.github.io/sitemap.xml 

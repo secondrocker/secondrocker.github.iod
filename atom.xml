@@ -4,7 +4,7 @@
   <title><![CDATA[生命不止，征战不息]]></title>
   <link href="http://secondrocker.github.io/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2014-08-08T23:59:41+08:00</updated>
+  <updated>2014-08-09T00:25:01+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -172,7 +172,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#117;&#115;&#101;&#x72;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x75;&#115;&#x65;&#x72;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x75;&#x73;&#x65;&#x72;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x75;&#115;&#101;&#x72;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

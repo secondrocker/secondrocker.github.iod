@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ruby | 生命不止，征战不息]]></title>
+  <title><![CDATA[Category: ruby | elephant]]></title>
   <link href="http://secondrocker.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2014-08-09T00:25:01+08:00</updated>
+  <updated>2014-08-09T01:51:10+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -91,7 +91,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x75;&#x73;&#101;&#114;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x75;&#115;&#x65;&#x72;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x75;&#115;&#x65;&#x72;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#109;">&#117;&#115;&#x65;&#114;&#64;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end
 <code>ruby
   it "signs me in" do

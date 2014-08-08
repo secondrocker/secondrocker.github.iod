@@ -10,31 +10,38 @@
   
   
   <url>
-    <loc>http://secondrocker.github.io/blog/archives/</loc>
-    <lastmod>2014-08-08T10:29:48+08:00</lastmod>
+    <loc>http://secondrocker.github.io/blog/</loc>
+    <lastmod>2014-08-08T10:53:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://secondrocker.github.io/archives/</loc>
-    <lastmod>2014-08-08T10:29:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://secondrocker.github.io/blog/</loc>
-    <lastmod>2014-08-08T10:29:48+08:00</lastmod>
+    <lastmod>2014-08-08T10:53:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://secondrocker.github.io/</loc>
-    <lastmod>2014-08-08T10:29:48+08:00</lastmod>
+    <lastmod>2014-08-08T10:53:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://secondrocker.github.io/blog/archives/</loc>
+    <lastmod>2014-08-08T10:53:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://secondrocker.github.io/about/</loc>
+    <lastmod>2014-08-08T10:53:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   

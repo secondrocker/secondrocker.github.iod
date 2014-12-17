@@ -2,17 +2,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="/javascripts/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
 	<title>大象无形 大音希声  | elephant</title>
 
-<meta name="author" content="Secondrocker"> 
+<meta name="author" content="Secondrocker">
 
-<meta name="description" content="瘦箭头 ->用于 function创建 1
-2
-$(&quot;#login&quot;).click -&gt; alert(&quot;ca&quot;) 胖箭头=>把 this作为参数代入function
-在function中使用this 为外部定义function的this， &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="查看每次git 提交历史 git log
+恢复到某个版本 git reset &ndash;hard [此版本号编号]
+恢复到上次提交 git reset &ndash;hard HEAD^ 上上次为 HEAD^^ 多次为 HEAD~num
+恢复到之前版本后git log &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -22,7 +22,7 @@ $(&quot;#login&quot;).click -&gt; alert(&quot;ca&quot;) 胖箭头=>把 this作�
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="/javascripts/jquery.min.js"></script>
 	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
 
 <script language="Javascript" type="text/javascript">
@@ -98,6 +98,60 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/18/gitming-ling/">
+		
+			Git命令</a>
+	</h2>
+	<div class="entry-content">
+		<p>查看每次git 提交历史  git log
+恢复到某个版本 git reset &ndash;hard [此版本号编号]
+恢复到上次提交 git reset &ndash;hard HEAD^   上上次为 HEAD^^ 多次为 HEAD~num
+恢复到之前版本后git log 不再显示恢复到的版本之后的提交情况  可使用 git reflog 查看全部更新历史
+打标签
+&ndash;git tag [tag-name]在当前分支最后一次提交打标签打标签
+&ndash;git tag [tag-name] [commit-id] 在某次提交da&#8217;biao&#8217;qian
+&ndash;创建带有说明的标签 git tag -a [tag-name] -m [message] [commit-id]
+&ndash;推送到远程 git push [origin] [tag-name]
+&ndash;删除本地标签 git tag -d [tag-name]
+&ndash;推送所有未推送标签 git push [origin] &ndash;tags
+&ndash;删除远程标签 git tag -d [tag-name] git push origin :refs/tags/v0.9
+&ndash;git命令起别名 git config &ndash;global alias.co checkout缩短输入长度</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:15:24+08:00" pubdate data-updated="true">Sep 18<sup>th</sup>, 2014</time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='/blog/categories/git/'>git</a>
+
+</div>
+
+
+	
+</div></article>
 
 
     <article class="post">
@@ -389,7 +443,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x75;&#x73;&#101;&#x72;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#109;">&#x75;&#115;&#x65;&#x72;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#117;&#x73;&#101;&#114;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#x6d;">&#x75;&#115;&#x65;&#x72;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

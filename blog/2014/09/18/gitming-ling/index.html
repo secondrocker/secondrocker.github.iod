@@ -5,11 +5,14 @@
 	<script data-cfasync="false" type="text/javascript" src="/javascripts/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Category: coffeescript  | elephant</title>
+	<title>git命令  | elephant</title>
 
 <meta name="author" content="Secondrocker">
 
-<meta name="description" content="Category: coffeescript"> <meta name="keywords" content="">
+<meta name="description" content="查看每次git 提交历史 git log
+恢复到某个版本 git reset &ndash;hard [此版本号编号]
+恢复到上次提交 git reset &ndash;hard HEAD^ 上上次为 HEAD^^ 多次为 HEAD~num
+恢复到之前版本后git log &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -94,31 +97,67 @@ $(document).ready(
 
 </header>
 
-	<div id="content" class="inner">
-	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Git命令</h2>
+	<div class="entry-content"><p>查看每次git 提交历史  git log
+恢复到某个版本 git reset &ndash;hard [此版本号编号]
+恢复到上次提交 git reset &ndash;hard HEAD^   上上次为 HEAD^^ 多次为 HEAD~num
+恢复到之前版本后git log 不再显示恢复到的版本之后的提交情况  可使用 git reflog 查看全部更新历史
+打标签
+&ndash;git tag [tag-name]在当前分支最后一次提交打标签打标签
+&ndash;git tag [tag-name] [commit-id] 在某次提交da&#8217;biao&#8217;qian
+&ndash;创建带有说明的标签 git tag -a [tag-name] -m [message] [commit-id]
+&ndash;推送到远程 git push [origin] [tag-name]
+&ndash;删除本地标签 git tag -d [tag-name]
+&ndash;推送所有未推送标签 git push [origin] &ndash;tags
+&ndash;删除远程标签 git tag -d [tag-name] git push origin :refs/tags/v0.9
+&ndash;git命令起别名 git config &ndash;global alias.co checkout缩短输入长度</p>
+</div>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2014</h1>
+<div class="meta">
+	<div class="date">
 
-<article>
-	<h2 class="title"><a href="/blog/2014/08/27/coffeescriptde-equals-%3E/">coffeescript的=></a></h2>
-	<div class="meta">
-		<div class="date">Aug 27</div>
-		
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:15:24+08:00" pubdate data-updated="true">Sep 18<sup>th</sup>, 2014</time></div>
+	
 
 <div class="tags">
 
-	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/js/'>js</a>
+	<a class='category' href='/blog/categories/git/'>git</a>
 
 </div>
 
 
-	    
-	</div>
-</article>
+	
+</div></article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -138,7 +177,10 @@ $(document).ready(
       var disqus_shortname = 'secondrocker';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://secondrocker.github.io/blog/2014/09/18/gitming-ling/';
+        var disqus_url = 'http://secondrocker.github.io/blog/2014/09/18/gitming-ling/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -99,19 +99,23 @@ $(document).ready(
 
 	<div id="content" class="inner"><article class="post">
 	<h2 class="title">Git命令</h2>
-	<div class="entry-content"><p>查看每次git 提交历史  git log
-恢复到某个版本 git reset &ndash;hard [此版本号编号]
-恢复到上次提交 git reset &ndash;hard HEAD^   上上次为 HEAD^^ 多次为 HEAD~num
-恢复到之前版本后git log 不再显示恢复到的版本之后的提交情况  可使用 git reflog 查看全部更新历史
-打标签
-&ndash;git tag [tag-name]在当前分支最后一次提交打标签打标签
-&ndash;git tag [tag-name] [commit-id] 在某次提交da&#8217;biao&#8217;qian
-&ndash;创建带有说明的标签 git tag -a [tag-name] -m [message] [commit-id]
-&ndash;推送到远程 git push [origin] [tag-name]
-&ndash;删除本地标签 git tag -d [tag-name]
-&ndash;推送所有未推送标签 git push [origin] &ndash;tags
-&ndash;删除远程标签 git tag -d [tag-name] git push origin :refs/tags/v0.9
-&ndash;git命令起别名 git config &ndash;global alias.co checkout缩短输入长度</p>
+	<div class="entry-content"><ul>
+<li>查看每次git 提交历史  git log</li>
+<li>恢复到某个版本 git reset &ndash;hard [此版本号编号]</li>
+<li>恢复到上次提交 git reset &ndash;hard HEAD^   上上次为 HEAD^^ 多次为 HEAD~num</li>
+<li>恢复到之前版本后git log 不再显示恢复到的版本之后的提交情况  可使用 git reflog 查看全部更新历史
+
+<h3>打标签</h3></li>
+<li>git tag [tag-name]在当前分支最后一次提交打标签打标签</li>
+<li>git tag [tag-name] [commit-id] 在某次提交da&#8217;biao&#8217;qian</li>
+<li>创建带有说明的标签 git tag -a [tag-name] -m [message] [commit-id]</li>
+<li>推送到远程 git push [origin] [tag-name]</li>
+<li>删除本地标签 git tag -d [tag-name]</li>
+<li>推送所有未推送标签 git push [origin] &ndash; tags</li>
+<li>删除远程标签 git tag -d [tag-name] git push origin :refs/tags/v0.9</li>
+<li>git命令起别名 git config &ndash;global alias.co checkout缩短输入长度</li>
+</ul>
+
 </div>
 
 

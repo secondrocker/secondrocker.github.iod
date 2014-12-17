@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | elephant]]></title>
   <link href="http://secondrocker.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2014-12-17T11:21:14+08:00</updated>
+  <updated>2014-12-17T11:35:38+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -53,7 +53,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x75;&#115;&#x65;&#114;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#x75;&#115;&#101;&#x72;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x75;&#115;&#101;&#x72;&#64;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#x6d;">&#x75;&#x73;&#x65;&#114;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#111;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end
 <code>ruby
   it "signs me in" do

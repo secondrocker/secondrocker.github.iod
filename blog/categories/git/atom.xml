@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Git | elephant]]></title>
-  <link href="http://secondrocker.github.io/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T20:40:13+08:00</updated>
-  <id>http://secondrocker.github.io/</id>
+  <link href="me.angry-arthas.com/blog/categories/git/atom.xml" rel="self"/>
+  <link href="me.angry-arthas.com/"/>
+  <updated>2015-03-18T20:43:25+08:00</updated>
+  <id>me.angry-arthas.com/</id>
   <author>
     <name><![CDATA[secondrocker]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git命令]]></title>
-    <link href="http://secondrocker.github.io/blog/2014/09/18/gitming-ling/"/>
+    <link href="me.angry-arthas.com/blog/2014/09/18/gitming-ling/"/>
     <updated>2014-09-18T01:15:24+08:00</updated>
-    <id>http://secondrocker.github.io/blog/2014/09/18/gitming-ling</id>
+    <id>me.angry-arthas.com/blog/2014/09/18/gitming-ling</id>
     <content type="html"><![CDATA[<ul>
 <li>查看每次git 提交历史  git log</li>
 <li>恢复到某个版本 git reset &ndash;hard [此版本号编号]</li>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Coffeescript | elephant]]></title>
-  <link href="http://secondrocker.github.io/blog/categories/coffeescript/atom.xml" rel="self"/>
-  <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T20:40:13+08:00</updated>
-  <id>http://secondrocker.github.io/</id>
+  <link href="me.angry-arthas.com/blog/categories/coffeescript/atom.xml" rel="self"/>
+  <link href="me.angry-arthas.com/"/>
+  <updated>2015-03-18T20:43:25+08:00</updated>
+  <id>me.angry-arthas.com/</id>
   <author>
     <name><![CDATA[secondrocker]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Coffeescript的=>]]></title>
-    <link href="http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-%3E/"/>
+    <link href="me.angry-arthas.com/blog/2014/08/27/coffeescriptde-equals-%3E/"/>
     <updated>2014-08-27T16:05:54+08:00</updated>
-    <id>http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-></id>
+    <id>me.angry-arthas.com/blog/2014/08/27/coffeescriptde-equals-></id>
     <content type="html"><![CDATA[<p>瘦箭头 ->用于 function创建
 <code>coffeescript
 $("#login").click -&gt;

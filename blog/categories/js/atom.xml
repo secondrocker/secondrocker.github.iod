@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Js | elephant]]></title>
-  <link href="http://secondrocker.github.io/blog/categories/js/atom.xml" rel="self"/>
-  <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T20:40:13+08:00</updated>
-  <id>http://secondrocker.github.io/</id>
+  <link href="me.angry-arthas.com/blog/categories/js/atom.xml" rel="self"/>
+  <link href="me.angry-arthas.com/"/>
+  <updated>2015-03-18T20:43:25+08:00</updated>
+  <id>me.angry-arthas.com/</id>
   <author>
     <name><![CDATA[secondrocker]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Constructor &amp;&amp; Prototype]]></title>
-    <link href="http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype/"/>
+    <link href="me.angry-arthas.com/blog/2015/03/18/constructor-and-and-prototype/"/>
     <updated>2015-03-18T16:42:25+08:00</updated>
-    <id>http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype</id>
+    <id>me.angry-arthas.com/blog/2015/03/18/constructor-and-and-prototype</id>
     <content type="html"><![CDATA[<p>每个对象都是个散列表
 每个原型都有相关连的函数,每个函数都有相关联的原型</p>
 
@@ -49,9 +49,9 @@ console.log((new A()).constructor);//为function A(){}
   
   <entry>
     <title type="html"><![CDATA[Coffeescript的=>]]></title>
-    <link href="http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-%3E/"/>
+    <link href="me.angry-arthas.com/blog/2014/08/27/coffeescriptde-equals-%3E/"/>
     <updated>2014-08-27T16:05:54+08:00</updated>
-    <id>http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-></id>
+    <id>me.angry-arthas.com/blog/2014/08/27/coffeescriptde-equals-></id>
     <content type="html"><![CDATA[<p>瘦箭头 ->用于 function创建
 <code>coffeescript
 $("#login").click -&gt;
@@ -69,9 +69,9 @@ ele.addEventListener "click",(e)=&gt;
   
   <entry>
     <title type="html"><![CDATA[Js闭包]]></title>
-    <link href="http://secondrocker.github.io/blog/2014/08/08/jsbi-bao/"/>
+    <link href="me.angry-arthas.com/blog/2014/08/08/jsbi-bao/"/>
     <updated>2014-08-08T10:58:57+08:00</updated>
-    <id>http://secondrocker.github.io/blog/2014/08/08/jsbi-bao</id>
+    <id>me.angry-arthas.com/blog/2014/08/08/jsbi-bao</id>
     <content type="html"><![CDATA[<p>创建一个对象时如果该对象用到某个内部作用域的变量，那么对这个内部作用域创建一个闭包</p>
 
 <p>eg

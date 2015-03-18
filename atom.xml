@@ -4,7 +4,7 @@
   <title><![CDATA[elephant]]></title>
   <link href="http://secondrocker.github.io/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T16:40:29+08:00</updated>
+  <updated>2015-03-18T16:42:50+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -80,6 +80,15 @@
 </span><span class='line'><span class="n">B</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">super_show</span>
 </span></code></pre></td></tr></table></div></figure>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Constructor And And Prototype]]></title>
+    <link href="http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype/"/>
+    <updated>2015-03-18T00:00:00+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -295,7 +304,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x75;&#115;&#x65;&#114;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#117;&#115;&#x65;&#114;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x75;&#x73;&#x65;&#x72;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#x75;&#115;&#101;&#114;&#64;&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

@@ -1,1 +1,45 @@
+<p>每个对象都是个散列表
+每个原型都有相关连的函数,每个函数都有相关联的原型</p>
 
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">A</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">A</span><span class="p">.</span><span class="nx">prototype</span> <span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">constructor</span><span class="p">;</span>
+</span><span class='line'><span class="nx">A</span><span class="o">==</span><span class="nx">c</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>函数的对象的constructor就是该函数（未修改prototype）</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">A</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">A</span><span class="p">();</span>
+</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">==</span> <span class="nx">A</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改函数的prototype后其对象的constructor为新的prototype的constructor</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">A</span><span class="p">(){};</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">B</span><span class="p">(){};</span>
+</span><span class='line'><span class="nx">A</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">B</span><span class="p">();</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="k">new</span> <span class="nx">A</span><span class="p">()).</span><span class="nx">constructor</span><span class="p">);</span> <span class="c1">//为function B(){}</span>
+</span><span class='line'><span class="nx">A</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">A</span><span class="p">;</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="k">new</span> <span class="nx">A</span><span class="p">()).</span><span class="nx">constructor</span><span class="p">);</span><span class="c1">//为function A(){}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>{}(对象直接量)对象是function Object(){}的对象</p>

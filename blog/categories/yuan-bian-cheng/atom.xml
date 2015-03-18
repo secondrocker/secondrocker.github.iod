@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 元编程 | My Octopress Blog]]></title>
+  <link href="http://secondrocker.github.io/blog/categories/yuan-bian-cheng/atom.xml" rel="self"/>
+  <link href="http://secondrocker.github.io/"/>
+  <updated>2015-03-18T18:47:21+08:00</updated>
+  <id>http://secondrocker.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby元编程1]]></title>
+    <link href="http://secondrocker.github.io/blog/2014/08/08/rubyyuan-bian-cheng-1/"/>
+    <updated>2014-08-08T10:59:50+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2014/08/08/rubyyuan-bian-cheng-1</id>
+    <content type="html"><![CDATA[<h1>ruby元编程之eigenclass</h1>
+
+<pre><code class="ruby">class BasicObject
+  def self.eigenclass
+    class &lt;&lt; self
+      self
+    end
+  end
+  def eigenclass
+    class &lt;&lt; self
+      self
+    end
+  end
+end
+
+class A
+  def self.haha
+    "ah"
+  end
+end
+
+class B &lt; A
+end
+
+#对象eigenclass的superclass就是对象的类
+b=B.new
+p b.eigenclass.superclass == B
+#类的eigenclass的superclass是类超类的eigenclass
+p B.eigenclass.superclass == B.superclass.eigenclass
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

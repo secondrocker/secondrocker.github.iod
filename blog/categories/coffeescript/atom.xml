@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Coffeescript | My Octopress Blog]]></title>
+  <link href="http://secondrocker.github.io/blog/categories/coffeescript/atom.xml" rel="self"/>
+  <link href="http://secondrocker.github.io/"/>
+  <updated>2015-03-18T18:47:21+08:00</updated>
+  <id>http://secondrocker.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Coffeescript的=>]]></title>
+    <link href="http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-%3E/"/>
+    <updated>2014-08-27T16:05:54+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2014/08/27/coffeescriptde-equals-></id>
+    <content type="html"><![CDATA[<p>瘦箭头 ->用于 function创建
+<code>coffeescript
+$("#login").click -&gt;
+  alert("ca")
+</code>
+胖箭头=>把 this作为参数代入function
+在function中使用this 为外部定义function的this，起到作用域转移的作用
+<code>coffeescript
+user_id="nidaye"
+ele.addEventListener "click",(e)=&gt;
+  alert(this.user_id)
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

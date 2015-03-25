@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | elephant]]></title>
   <link href="me.angry-arthas.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="me.angry-arthas.com/"/>
-  <updated>2015-03-18T20:43:25+08:00</updated>
+  <updated>2015-03-25T22:46:44+08:00</updated>
   <id>me.angry-arthas.com/</id>
   <author>
     <name><![CDATA[secondrocker]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[广度优先的二叉树]]></title>
+    <link href="me.angry-arthas.com/blog/2015/03/25/yan-du-you-xian-de-er-cha-shu/"/>
+    <updated>2015-03-25T22:44:13+08:00</updated>
+    <id>me.angry-arthas.com/blog/2015/03/25/yan-du-you-xian-de-er-cha-shu</id>
+    <content type="html"><![CDATA[<pre><code class="ruby">class Tree
+  attr_accessor :left
+  attr_accessor :right
+  attr_accessor :data
+
+  def initialize(data)
+    @data = data
+    @left = nil
+    @right = nil
+  end
+
+  def insert(x)
+    list = []
+    if self.left == nil
+      self.left = Tree.new(x)
+    elsif self.right == nil
+      self.right = Tree.new(x)
+    else
+      list &lt;&lt; self.left
+      list &lt;&lt; self.right
+      loop do
+        current = list.shift
+        if current.left == nil
+          current.left = Tree.new(x)
+          break
+        elsif current.right == nil
+          current.right = Tree.new(x)
+          break
+        else
+          list &lt;&lt; current.left
+          list &lt;&lt; current.right
+        end
+      end
+    end
+  end
+
+  def init_tree
+    puts "input the value:"
+    ipt = gets
+    while ipt != "-1\n"
+      insert ipt
+      puts "input the value:"
+      ipt = gets
+    end
+  end
+  def traverse
+    yield data
+    list = []
+    list &lt;&lt; left if left!=nil
+    list &lt;&lt; right if right!=nil
+    while !list.empty? do
+      current = list.shift
+      if current!=nil
+        yield current.data
+        list &lt;&lt; current.left if current.left!=nil
+        list &lt;&lt; current.right if current.right!=nil
+      end
+    end
+  end
+end
+
+tree = Tree.new("root")
+tree.insert(1)
+tree.insert(2)
+tree.insert(3)
+tree.insert(4)
+tree.insert(5)
+tree.insert(6)
+tree.insert(7)
+tree.traverse{|x| puts x}
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Super_method]]></title>
@@ -144,7 +223,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x75;&#x73;&#x65;&#114;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;">&#117;&#x73;&#x65;&#x72;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#117;&#x73;&#x65;&#114;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;">&#x75;&#115;&#101;&#x72;&#x40;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end
 <code>ruby
   it "signs me in" do

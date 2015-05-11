@@ -4,7 +4,7 @@
   <title><![CDATA[Category: js | elephant]]></title>
   <link href="http://secondrocker.github.io/blog/categories/js/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T16:43:23+08:00</updated>
+  <updated>2015-05-11T21:06:48+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[constructor &amp;&amp; prototype]]></title>
+    <link href="http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype/"/>
+    <updated>2015-03-18T16:42:25+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2015/03/18/constructor-and-and-prototype</id>
+    <content type="html"><![CDATA[<p>每个对象都是个散列表
+每个原型都有相关连的函数,每个函数都有相关联的原型</p>
+
+<pre><code class="js">var A = function(){};
+var p = A.prototype ;
+var c = p.constructor;
+A==c
+</code></pre>
+
+<p>函数的对象的constructor就是该函数（未修改prototype）
+<code>js
+function A() {
+}
+var a = new A();
+a.constructor == A
+</code>
+修改函数的prototype后其对象的constructor为新的prototype的constructor
+<code>js
+function A(){};
+function B(){};
+A.prototype = new B();
+console.log((new A()).constructor); //为function B(){}
+A.prototype.constructor = A;
+console.log((new A()).constructor);//为function A(){}
+</code>
+{}(对象直接量)对象是function Object(){}的对象</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[coffeescript的=>]]></title>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | elephant]]></title>
   <link href="http://secondrocker.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://secondrocker.github.io/"/>
-  <updated>2015-03-18T16:43:23+08:00</updated>
+  <updated>2015-05-11T21:06:48+08:00</updated>
   <id>http://secondrocker.github.io/</id>
   <author>
     <name><![CDATA[Secondrocker]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[super_method]]></title>
+    <link href="http://secondrocker.github.io/blog/2015/03/18/super-method/"/>
+    <updated>2015-03-18T16:33:21+08:00</updated>
+    <id>http://secondrocker.github.io/blog/2015/03/18/super-method</id>
+    <content type="html"><![CDATA[<pre><code class="ruby">class A
+  def show
+    "a method"
+  end
+end
+
+class B&lt;A
+  def show
+    "b method"
+  end
+end
+</code></pre>
+
+<p>怎样用类B的对象调用A的show方法?
+<code>ruby
+B.new.method(:show).super_memthod.call  #ruby 2.2可用
+</code>
+2.2之前
+&#8220;`ruby
+class A
+  def show
+    &ldquo;a method&rdquo;
+  end
+end</p>
+
+<p>class B&lt;A
+  alias_method :super_show ,:show
+  def show
+    &ldquo;b method&rdquo;
+  end
+end
+B.new.super_show
+&#8220;`</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ruby元编程1]]></title>
@@ -91,7 +132,7 @@ If you are not using Rails, tag all the example groups in which you want to use 
 You can now write your specs like so:
 describe &ldquo;the signin process&rdquo;, :type => :feature do
   before :each do
-    User.make(:email => &lsquo;<a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#117;&#x73;&#101;&#114;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">&#117;&#115;&#101;&#114;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
+    User.make(:email => &lsquo;<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#117;&#115;&#x65;&#x72;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#109;">&#x75;&#115;&#101;&#x72;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>&rsquo;, :password => &lsquo;caplin&rsquo;)
   end
 <code>ruby
   it "signs me in" do

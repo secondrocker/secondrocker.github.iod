@@ -1,0 +1,80 @@
+<blockquote><p>将hash {a:1,b:{c1:2,c2:3,c3:{d1:4,d2:5},e:6}}转化为下面字符串
+a = 1 , b_c1 = 2 , b_c2 = 3 , b_c3_d1 = 4 , b_c3_d2 = 5 , b_e = 6</p></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span><span class="ss">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="ss">b</span><span class="p">:{</span><span class="ss">c1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="ss">c2</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="ss">c3</span><span class="p">:{</span><span class="ss">d1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="ss">d2</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span><span class="ss">e</span><span class="p">:</span><span class="mi">6</span><span class="p">}}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">unfold</span><span class="p">(</span><span class="nb">hash</span><span class="p">,</span><span class="nb">p</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">arr</span> <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'>  <span class="nb">hash</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span><span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">v</span><span class="o">.</span><span class="n">instance_of?</span> <span class="no">Hash</span>
+</span><span class='line'>      <span class="n">arr</span> <span class="o">+=</span> <span class="n">unfold</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="nb">p</span><span class="o">+</span><span class="n">k</span><span class="o">.</span><span class="n">to_s</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>      <span class="n">arr</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">p</span><span class="si">}#{</span><span class="n">k</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2"> = </span><span class="si">#{</span><span class="n">v</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>  <span class="n">arr</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="n">unfold</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span><span class="o">.</span><span class="n">join</span> <span class="s2">&quot; , &quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>递归操作一般用于将问题复杂度降低，但感觉ruby的栈使递归无法发挥，稍微大点的递归就会导致栈溢出，之前写的递归版本的插入排序，同样的思路在java/java/c#都很好用，但在ruby中就是不行，要么调整栈的大小，但运行缓慢，很多时候总是得换为循环，感觉应该不是算法的问题,不知道什么时候ruby才能解决这个问题</p>
+
+<hr />
+
+<p>之前写的插入排序</p></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">insertSort</span><span class="p">(</span><span class="n">left</span><span class="o">=[]</span><span class="p">,</span><span class="n">arr</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">left</span> <span class="k">unless</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">arr</span><span class="o">.</span><span class="n">pop</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">left</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">l</span><span class="p">,</span><span class="n">i</span><span class="o">|</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">l</span><span class="o">&gt;</span><span class="n">x</span>
+</span><span class='line'>            <span class="n">left</span><span class="o">.</span><span class="n">insert</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">insertSort</span> <span class="n">left</span><span class="p">,</span><span class="n">arr</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="n">left</span><span class="o">.</span><span class="n">push</span> <span class="n">x</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">insertSort</span> <span class="n">left</span><span class="p">,</span><span class="n">arr</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">arr</span><span class="o">=[]</span>
+</span><span class='line'><span class="n">arrE</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">10000</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'><span class="mi">10000</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">tmp</span><span class="o">=</span><span class="nb">rand</span><span class="p">(</span><span class="n">arrE</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">arr</span><span class="o">.</span><span class="n">push</span> <span class="p">(</span><span class="n">arrE</span><span class="o">.</span><span class="n">delete_at</span> <span class="n">tmp</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="p">(</span><span class="n">insertSort</span> <span class="n">arr</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
